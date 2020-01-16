@@ -4,9 +4,10 @@ public class Exercises {
 		if (a == null || a.length == 0 || b == null || b.length == 0) {
 			return false;
 		}
-		
 		// write your code here
-		
+		if(a[0] == b[0] || a[a.length -1] == b[b.length -1 ]){
+			return true;
+		}
 		return false;	// default return value to ensure compilation
 	}
 	
@@ -62,5 +63,9 @@ public class Exercises {
 		// write your code here
 		
 		return -1;		// default return value to ensure compilation
+	}
+
+	public static void main(String[]args){
+		
 	}
 }
