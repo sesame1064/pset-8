@@ -14,25 +14,43 @@ public class Exercises {
 	
 	public String[] endsMeet(String[] values, int n) {
 		// write your code here
-		if(values == null || values.length < n || n < 1){
+		if(values == null || n < 1 || values.length < n ){
 			return new String[0];
 		}
+		
 		String[] first = Arrays.copyOfRange(values, 0, n);
 		String[] last = Arrays.copyOfRange(values, values.length-n , values.length);
 
 		String[] finalArray = new String[first.length + last.length];
+		//arraycopy(Object src, int srcPos, Object dest, int destPos, int length)
 		System.arraycopy(first, 0, finalArray, 0, first.length);
 		System.arraycopy(last, 0, finalArray, first.length, last.length);
 		
 		return finalArray;
 		
-		//return null;	// default return value to ensure compilation
 	}
 	
 	public int difference(int[] numbers) {
 		// write your code here
+		if(numbers.length > 0 || number != null){
+			int min = numbers[0];
+			int max = numbers[0];
+
+			for(int number : numbers){
+				if(number > max){
+					max = number;
+				}
+				if(number < min){
+					min = number;
+				}
+			}
+			return max - min;
+
+		}else{
+			return -1;		// default return value to ensure compilation
+		}
 		
-		return -1;		// default return value to ensure compilation
+	
 	}
 	
 	public double biggest(double[] numbers) {
