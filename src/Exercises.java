@@ -56,22 +56,18 @@ public class Exercises {
 		if(numbers == null || numbers.length < 3 || numbers.length % 2 == 0){
 			return -1.0;		// default return value to ensure compilation
 		}else{
-			double first = numbers[0];
+			double biggest = numbers[0];
 			double middle = numbers[numbers.length / 2];
 			double end = numbers[numbers.length-1];
 
-			double biggest = numbers[0];
-
 			if(biggest < middle){
 				biggest = middle;
-			}if else(biggest < end){
+			}
+			if(biggest < end){
 				biggest = end;
 			}
-			
-			return biggest;
-			
+			return biggest;			
 		}
-
 	}
 	
 	public String[] middle(String[] values) {
