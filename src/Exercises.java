@@ -32,7 +32,9 @@ public class Exercises {
 	
 	public int difference(int[] numbers) {
 		// write your code here
-		if(numbers.length > 0 || number != null){
+		if(numbers == null || numbers.length == 0){
+			return -1;
+		}else{
 			int min = numbers[0];
 			int max = numbers[0];
 
@@ -46,11 +48,7 @@ public class Exercises {
 			}
 			return max - min;
 
-		}else{
-			return -1;		// default return value to ensure compilation
 		}
-		
-	
 	}
 	
 	public double biggest(double[] numbers) {
