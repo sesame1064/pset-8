@@ -91,19 +91,26 @@ public class Exercises {
 		if(numbers == null || numbers.length < 3){
 			return false;	// default return value to ensure compilation
 		}
-		for(int i = 0; i < numbers.length; i++){
+		for(int i = 0; i < numbers.length - 2; i++){
 			if(numbers[i] < numbers[i + 1] && numbers[i + 1] < numbers[i + 2]){
 				return true;
 			}
 		}
 		return false;
-
 	}
 	
 	public boolean everywhere(int[] numbers, int x) {
 		// write your code here
-		
-		return false;	// default return value to ensure compilation
+		if(numbers == null || numbers.length < 2){
+			return false;
+		}
+		for(int i = 1; i < numbers.length - 1; i++){
+			if(!(numbers[i] == x || numbers[i - 1] == x || numbers[i + 1] == x)){
+				return false;
+			}
+		}
+		return true;
+
 	}
 	
 	public boolean consecutive(int[] numbers) {
