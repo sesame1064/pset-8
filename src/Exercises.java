@@ -115,6 +115,19 @@ public class Exercises {
 	
 	public boolean consecutive(int[] numbers) {
 		// write your code here
+		if(numbers == null || numbers.length < 3){
+			return false;
+		}
+		for(int i = 1; i < numbers.length - 1; i++){
+			if(numbers[i - 1]) % 2 == 0 && numbers[i] % 2 == 0 && numbers[i + 1] % 2 == 0){
+				return true;
+			}
+		}  
+		for(int y = 1; y < numbers.length -1; i++){
+			if(numbers[y - 1] % 2 != 0 && numbers[y] % 2 != 0 && numbers[y + 1] % 2 != 0){
+				return true;
+			}
+		}
 		
 		return false;	// default return value to ensure compilation
 	}
