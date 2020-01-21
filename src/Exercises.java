@@ -76,21 +76,28 @@ public class Exercises {
 			return new String[0];	// default return value to ensure compilation
 		}else{
 			int indexMid = values.length / 2;
-			String middle = values[indexMid]
+			String middle = values[indexMid];
 			String upper = values[indexMid + 1];
 			String lower = values[indexMid - 1];
 
-			String[] final = [lower, middle, upper];
-			return final;
+			String[] finalArray = {lower, middle, upper};
+			return finalArray;
 		}
 
-		
 	}
 
 	public boolean increasing(int[] numbers) {
 		// write your code here
-		
-		return false;	// default return value to ensure compilation
+		if(numbers == null || numbers.length < 3){
+			return false;	// default return value to ensure compilation
+		}
+		for(int i = 0; i < numbers.length; i++){
+			if(numbers[i] < numbers[i + 1] && numbers[i + 1] < numbers[i + 2]){
+				return true;
+			}
+		}
+		return false;
+
 	}
 	
 	public boolean everywhere(int[] numbers, int x) {
